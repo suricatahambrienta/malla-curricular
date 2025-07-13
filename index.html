@@ -7,49 +7,32 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Malla Curricular</h1>
+
+  <h1>Mi Malla Curricular</h1>
 
   <div class="malla-horizontal">
     <!-- Aquí irán los semestres y cursos -->
-    <div class="semestre">
-      <h2>Semestre 1</h2>
-      <div class="grid">
-        <div class="curso">
-          <div class="estado pendiente">Pendiente</div>
-          <div class="contenido-central">
-            <div class="nombre">Taller de Formación y Representación I</div>
-          </div>
-          <div class="datos-inferiores">
-            <div class="sigla">AQT0000</div>
-            <div class="creditos">20 cr.</div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
-  <button id="btn-agregar-curso" title="Agregar curso">+</button>
+  <button id="btn-agregar-curso" title="Agregar nuevo curso">+</button>
 
+  <!-- Modal para agregar curso -->
   <div id="modal-agregar-curso" class="modal-oculto">
     <div class="modal-contenido">
-      <h3>Agregar curso</h3>
+      <h2>Agregar Nuevo Curso</h2>
       <form id="form-agregar-curso">
-        <label>
-          Nombre:<br />
-          <input type="text" id="input-nombre" required />
-        </label><br /><br />
-        <label>
-          Sigla:<br />
-          <input type="text" id="input-sigla" required />
-        </label><br /><br />
-        <label>
-          Créditos:<br />
-          <input type="number" id="input-creditos" min="1" required />
-        </label><br /><br />
-        <label>
-          Semestre:<br />
-          <input type="number" id="input-semestre" min="1" required />
-        </label><br /><br />
+        <label for="input-nombre">Nombre del curso:</label><br />
+        <input id="input-nombre" type="text" required /><br /><br />
+
+        <label for="input-sigla">Sigla:</label><br />
+        <input id="input-sigla" type="text" required /><br /><br />
+
+        <label for="input-creditos">Créditos:</label><br />
+        <input id="input-creditos" type="number" min="1" required /><br /><br />
+
+        <label for="input-semestre">Semestre (número):</label><br />
+        <input id="input-semestre" type="number" min="1" required /><br /><br />
+
         <button type="submit">Aceptar</button>
         <button type="button" id="btn-cancelar">Cancelar</button>
       </form>
