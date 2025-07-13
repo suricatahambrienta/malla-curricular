@@ -1,0 +1,107 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Contenedor general de todos los semestres */
+.malla-horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  overflow-x: auto;
+  padding-bottom: 2rem;
+}
+
+.malla-horizontal::-webkit-scrollbar {
+  height: 8px;
+}
+.malla-horizontal::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Cada columna de semestre */
+.semestre {
+  display: flex;
+  flex-direction: column;
+  min-width: 260px;
+}
+
+.semestre h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5rem;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Tarjeta de curso */
+.curso {
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: white;
+  width: 160px;
+  min-height: 100px;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.estado {
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.4rem;
+}
+
+.estado.pendiente { color: #777; }
+.estado.cursando { color: #b58900; }
+.estado.aprobado { color: #228B22; }
+.estado.reprobado,
+.estado.retirado { color: #c0392b; }
+
+.contenido-central {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nombre {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.tachado {
+  text-decoration: line-through;
+  font-style: italic;
+  color: #c0392b;
+}
+
+/* Sigla y créditos en parte inferior */
+.datos-inferiores {
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  margin-top: 0.3rem;
+}
+
+.sigla,
+.creditos {
+  font-size: 0.8rem;
+}
