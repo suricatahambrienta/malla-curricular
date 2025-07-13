@@ -1,24 +1,28 @@
 window.addEventListener("DOMContentLoaded", () => {
   const estados = ["Pendiente", "Cursando", "Aprobado", "Reprobado", "Retirado"];
 
+  const modalAgregarCurso = document.getElementById("modal-agregar-curso");
+  const btnAgregarCurso = document.getElementById("btn-agregar-curso");
+  const formAgregarCurso = document.getElementById("form-agregar-curso");
+  const btnCancelar = document.getElementById("btn-cancelar");
+
+  // Empieza oculto
+  modalAgregarCurso.classList.add("modal-oculto");
+
   document.querySelectorAll(".curso").forEach((curso) => {
     aplicarEstadoDesdeStorage(curso);
     curso.addEventListener("click", () => mostrarMenu(curso));
   });
 
-  // Botón para abrir modal
-  const btnAgregarCurso = document.getElementById("btn-agregar-curso");
-  const modalAgregarCurso = document.getElementById("modal-agregar-curso");
-  const formAgregarCurso = document.getElementById("form-agregar-curso");
-  const btnCancelar = document.getElementById("btn-cancelar");
-
   btnAgregarCurso.addEventListener("click", () => {
     formAgregarCurso.reset();
     modalAgregarCurso.classList.remove("modal-oculto");
+    modalAgregarCurso.classList.add("modal-visible");
   });
 
   btnCancelar.addEventListener("click", () => {
     modalAgregarCurso.classList.add("modal-oculto");
+    modalAgregarCurso.classList.remove("modal-visible");
   });
 
   formAgregarCurso.addEventListener("submit", (event) => {
@@ -37,6 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
     agregarCurso(nombre, sigla, creditos, semestre);
 
     modalAgregarCurso.classList.add("modal-oculto");
+    modalAgregarCurso.classList.remove("modal-visible");
     formAgregarCurso.reset();
   });
 
