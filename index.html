@@ -1,133 +1,50 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Malla Curricular</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: white;
-      margin: 0;
-      padding: 2rem;
-    }
+<h1>Malla Curricular</h1>
 
-    h1 {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .semestre {
-      margin-bottom: 3rem;
-    }
-
-    .semestre h2 {
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid black;
-      padding-bottom: 0.5rem;
-    }
-
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .curso {
-      border: 1px solid black;
-      border-radius: 4px;
-      background-color: white;
-      width: 220px;
-      min-height: 120px;
-      padding: 0.8rem;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .estado {
-      font-style: italic;
-      text-align: center;
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid black;
-      padding-bottom: 0.3rem;
-    }
-
-    .estado.pendiente { color: #777; }
-    .estado.cursando { color: #b58900; }
-    .estado.aprobado { color: #228B22; }
-    .estado.reprobado,
-    .estado.retirado { color: #c0392b; }
-
-    .nombre {
-      font-weight: 600;
-      font-size: 1rem;
-      text-align: center;
-    }
-
-    .sigla, .creditos {
-      font-size: 0.8rem;
-      color: #555;
-    }
-
-    .sigla {
-      position: absolute;
-      bottom: 8px;
-      left: 10px;
-    }
-
-    .creditos {
-      position: absolute;
-      bottom: 8px;
-      right: 10px;
-    }
-
-    .tachado {
-      text-decoration: line-through;
-      font-style: italic;
-      color: #c0392b;
-    }
-  </style>
-</head>
-<body>
-  <h1>Malla Curricular</h1>
-
+<div class="malla-horizontal">
+  <!-- Semestre 1 -->
   <div class="semestre">
     <h2>Semestre 1</h2>
     <div class="grid">
-      <!-- Curso aprobado -->
       <div class="curso">
         <div class="estado aprobado">Aprobado con 6,5</div>
-        <div class="nombre">Taller de Formación y Representación I</div>
-        <div class="sigla">AQT0000</div>
-        <div class="creditos">20 cr.</div>
+        <div class="contenido-central">
+          <div class="nombre">Taller de Formación y Representación I</div>
+        </div>
+        <div class="datos-inferiores">
+          <div class="sigla">AQT0000</div>
+          <div class="creditos">20 cr.</div>
+        </div>
       </div>
 
-      <!-- Curso reprobado -->
       <div class="curso">
         <div class="estado reprobado">Reprobado con 3,4</div>
-        <div class="nombre tachado">Física General</div>
-        <div class="sigla tachado">FIS1032</div>
-        <div class="creditos tachado">10 cr.</div>
+        <div class="contenido-central">
+          <div class="nombre tachado">Física General</div>
+        </div>
+        <div class="datos-inferiores">
+          <div class="sigla tachado">FIS1032</div>
+          <div class="creditos tachado">10 cr.</div>
+        </div>
       </div>
 
-      <!-- Curso retirado -->
       <div class="curso">
         <div class="estado retirado">Retirado</div>
-        <div class="nombre tachado">Precálculo</div>
-        <div class="sigla tachado">MAT1000</div>
-        <div class="creditos tachado">10 cr.</div>
+        <div class="contenido-central">
+          <div class="nombre tachado">Precálculo</div>
+        </div>
+        <div class="datos-inferiores">
+          <div class="sigla tachado">MAT1000</div>
+          <div class="creditos tachado">10 cr.</div>
+        </div>
       </div>
 
-      <!-- Curso pendiente -->
       <div class="curso">
         <div class="estado pendiente">Pendiente</div>
-        <div class="nombre">Ética en la Arquitectura</div>
-        <div class="sigla">FIL184A</div>
-        <div class="creditos">10 cr.</div>
+        <div class="contenido-central">
+          <div class="nombre">Ética en la Arquitectura</div>
+        </div>
+        <div class="datos-inferiores">
+          <div class="sigla">FIL184A</div>
+          <div class="creditos">10 cr.</div>
+        </div>
       </div>
-    </div>
-  </div>
-</body>
-</html>
