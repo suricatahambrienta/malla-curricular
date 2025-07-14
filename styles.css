@@ -1,4 +1,3 @@
-/* Estilos base */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: white;
@@ -11,7 +10,6 @@ h1 {
   margin-bottom: 3rem;
 }
 
-/* Contenedor general de todos los semestres */
 .malla-horizontal {
   display: flex;
   flex-direction: row;
@@ -28,7 +26,6 @@ h1 {
   border-radius: 4px;
 }
 
-/* Cada columna de semestre */
 .semestre {
   display: flex;
   flex-direction: column;
@@ -48,7 +45,6 @@ h1 {
   gap: 1rem;
 }
 
-/* Tarjeta de curso */
 .curso {
   border: 1px solid black;
   border-radius: 4px;
@@ -73,22 +69,10 @@ h1 {
   user-select: none;
 }
 
-.estado.pendiente {
-  color: #777;
-}
-
-.estado.cursando {
-  color: #b58900;
-}
-
-.estado.aprobado {
-  color: #228B22;
-}
-
-.estado.reprobado,
-.estado.retirado {
-  color: #c0392b;
-}
+.estado.pendiente { color: #777; }
+.estado.cursando { color: #b58900; }
+.estado.aprobado { color: #228B22; }
+.estado.reprobado, .estado.retirado { color: #c0392b; }
 
 .contenido-central {
   flex-grow: 1;
@@ -108,7 +92,6 @@ h1 {
   color: #c0392b;
 }
 
-/* Sigla y créditos en parte inferior */
 .datos-inferiores {
   display: flex;
   justify-content: space-between;
@@ -117,12 +100,10 @@ h1 {
   margin-top: 0.3rem;
 }
 
-.sigla,
-.creditos {
+.sigla, .creditos {
   font-size: 0.8rem;
 }
 
-/* Botón flotante */
 #btn-agregar-curso {
   position: fixed;
   bottom: 20px;
@@ -149,12 +130,10 @@ h1 {
   background-color: #1e7a1e;
 }
 
-/* Modal oculto */
 .modal-oculto {
   display: none;
 }
 
-/* Modal visible */
 #modal-agregar-curso {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -165,45 +144,40 @@ h1 {
   z-index: 1500;
 }
 
-/* Contenido del modal */
 .modal-contenido {
   background: white;
   padding: 1.5rem 2rem;
   border-radius: 8px;
   min-width: 320px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  text-align: left;
 }
 
-/* Título del modal */
 .modal-contenido h3 {
   margin-top: 0;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-/* Etiquetas de los campos */
 .modal-contenido label {
   display: block;
   font-weight: 600;
   font-size: 0.9rem;
-  margin-bottom: 0.15rem; /* espacio reducido */
+  margin-top: 1rem;
 }
 
-/* Campos de texto */
 .modal-contenido input {
   width: 100%;
-  padding: 0.8rem 0.6rem;
+  padding: 0.5rem 0.6rem;
   font-size: 1rem;
-  margin-top: 0.15rem; /* espacio reducido */
+  margin-top: 0.2rem;
   box-sizing: border-box;
   border: 1px solid #999;
   border-radius: 8px;
-  margin-bottom: 1rem; /* separación entre bloques */
 }
 
-/* Botones dentro del modal */
 .modal-contenido button {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-right: 0.5rem;
   padding: 0.5rem 1rem;
   font-weight: 600;
@@ -213,7 +187,6 @@ h1 {
   transition: background-color 0.3s;
 }
 
-/* Botón Aceptar */
 .modal-contenido button[type="submit"] {
   background-color: #228B22;
   color: white;
@@ -223,7 +196,6 @@ h1 {
   background-color: #1e7a1e;
 }
 
-/* Botón Cancelar */
 .modal-contenido button#btn-cancelar {
   background-color: #bbb;
   color: #222;
@@ -231,34 +203,4 @@ h1 {
 
 .modal-contenido button#btn-cancelar:hover {
   background-color: #999;
-}
-
-/* Menú de selección estado */
-.menu-estado {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  border: 1px solid #333;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 2000;
-  width: 120px;
-  user-select: none;
-}
-
-.menu-estado .opcion {
-  padding: 6px 8px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  border-bottom: 1px solid #ccc;
-}
-
-.menu-estado .opcion:last-child {
-  border-bottom: none;
-}
-
-.menu-estado .opcion:hover {
-  background-color: #eee;
 }

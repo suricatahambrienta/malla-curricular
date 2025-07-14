@@ -2,54 +2,40 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Malla Curricular</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla Curricular Interactiva</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Mi Malla Curricular</h1>
+  <h1>Malla Curricular</h1>
 
-  <div class="malla-horizontal" id="contenedor-malla">
-    <div class="semestre" data-semestre="1">
-      <h2>Semestre 1</h2>
-      <div class="grid">
-        <div class="curso" data-id="1">
-          <div class="estado pendiente">Pendiente</div>
-          <div class="contenido-central">
-            <div class="nombre">Taller de Formación y Representación I</div>
-          </div>
-          <div class="datos-inferiores">
-            <span class="sigla">AQT0000</span>
-            <span class="creditos">20 cr.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Agrega más semestres aquí -->
+  <div class="malla-horizontal" id="malla">
+    <!-- Aquí se cargarán los semestres y cursos -->
   </div>
 
-  <!-- Botón para abrir modal -->
-  <button id="btn-agregar-curso">+</button>
+  <!-- Botón flotante para agregar curso -->
+  <button id="btn-agregar-curso" title="Agregar curso">+</button>
 
-  <!-- Modal de agregar curso (parte oculto) -->
+  <!-- Modal oculto al inicio -->
   <div id="modal-agregar-curso" class="modal-oculto">
     <div class="modal-contenido">
-      <h3>Agregar Curso</h3>
+      <h3>Agregar nuevo curso</h3>
+      <label for="input-nombre">Nombre del curso:</label>
+      <input type="text" id="input-nombre" />
 
-      <label for="nombre-curso">Nombre:</label>
-      <input type="text" id="nombre-curso" />
+      <label for="input-sigla">Sigla:</label>
+      <input type="text" id="input-sigla" />
 
-      <label for="sigla-curso">Sigla:</label>
-      <input type="text" id="sigla-curso" />
+      <label for="input-creditos">Créditos:</label>
+      <input type="number" id="input-creditos" min="0" />
 
-      <label for="creditos-curso">Créditos:</label>
-      <input type="number" id="creditos-curso" />
+      <label for="input-semestre">Semestre:</label>
+      <input type="number" id="input-semestre" min="1" />
 
-      <label for="semestre-curso">Semestre:</label>
-      <input type="number" id="semestre-curso" min="1" />
-
-      <button type="submit" id="btn-confirmar-curso">Aceptar</button>
-      <button id="btn-cancelar">Cancelar</button>
+      <div style="margin-top: 1rem; text-align: right;">
+        <button id="btn-cancelar">Cancelar</button>
+        <button id="btn-aceptar">Aceptar</button>
+      </div>
     </div>
   </div>
 
