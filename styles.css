@@ -193,17 +193,36 @@ h1 {
   }
 }
 
-/* Botón cancelar */
-#btn-cancelar {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
+/* Botones dentro del modal */
+.modal-contenido button {
+  border: none;
   border-radius: 6px;
-  background-color: #f7f7f7;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.2s;
+  margin-right: 0.6rem;
 }
 
+/* Botón aceptar */
+.modal-contenido button[type="submit"] {
+  background-color: #228B22;
+  color: white;
+}
+
+/* Botón aceptar hover */
+.modal-contenido button[type="submit"]:hover {
+  background-color: #196619;
+}
+
+/* Botón cancelar */
+#btn-cancelar {
+  background-color: #ccc;
+  color: #333;
+}
+
+/* Botón cancelar hover */
 #btn-cancelar:hover {
-  background-color: #e3e3e3;
+  background-color: #999;
+  color: white;
 }
