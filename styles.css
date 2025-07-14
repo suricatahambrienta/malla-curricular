@@ -186,13 +186,13 @@ h1 {
 }
 
 .modal-contenido input {
-  width: 100%;
-  padding: 0.4rem 0.5rem;
+  width: 100%;               /* Ocupa todo el ancho del contenedor */
+  padding: 0.8rem 0.6rem;   /* Más alto y cómodo para escribir */
   font-size: 1rem;
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
   box-sizing: border-box;
   border: 1px solid #999;
-  border-radius: 4px;
+  border-radius: 8px;       /* Bordes redondeados */
 }
 
 .modal-contenido button {
