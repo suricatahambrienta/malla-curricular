@@ -19,25 +19,25 @@
   <!-- Modal para agregar curso -->
   <div id="modal-agregar-curso" class="modal-oculto">
     <div class="modal-contenido">
-      <h2>Agregar Nuevo Curso</h2>
-      <form id="form-agregar-curso">
-        <label for="input-nombre">Nombre del curso:</label>
-        <input id="input-nombre" type="text" required />
+      <h3>Agregar Curso</h3>
 
-        <label for="input-sigla">Sigla:</label>
-        <input id="input-sigla" type="text" required />
+      <label for="nombre-curso">Nombre:</label>
+      <input type="text" id="nombre-curso" />
 
-        <label for="input-creditos">Créditos:</label>
-        <input id="input-creditos" type="number" min="1" required />
+      <label for="sigla-curso">Sigla:</label>
+      <input type="text" id="sigla-curso" />
 
-        <label for="input-semestre">Semestre (número):</label>
-        <input id="input-semestre" type="number" min="1" required />
+      <label for="creditos-curso">Créditos:</label>
+      <input type="number" id="creditos-curso" />
 
-        <button type="submit">Aceptar</button>
-        <button type="button" id="btn-cancelar">Cancelar</button>
-      </form>
+      <label for="semestre-curso">Semestre:</label>
+      <input type="number" id="semestre-curso" min="1" />
+
+      <button type="submit" id="btn-confirmar-curso">Aceptar</button>
+      <button id="btn-cancelar">Cancelar</button>
     </div>
   </div>
+
 
   <script src="script.js"></script>
 </body>
