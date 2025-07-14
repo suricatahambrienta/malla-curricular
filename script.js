@@ -6,8 +6,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const formAgregarCurso = document.getElementById("form-agregar-curso");
   const btnCancelar = document.getElementById("btn-cancelar");
 
-  // Empieza oculto
+  // Asegurar que el modal esté oculto al cargar la página
   modalAgregarCurso.classList.add("modal-oculto");
+  modalAgregarCurso.classList.remove("modal-visible");
 
   document.querySelectorAll(".curso").forEach((curso) => {
     aplicarEstadoDesdeStorage(curso);
