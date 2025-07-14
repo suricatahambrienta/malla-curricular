@@ -188,6 +188,7 @@ h1 {
 /* Etiquetas de los campos */
 .modal-contenido label {
   display: block;
+  margin-top: 0.3rem;
   font-weight: 600;
   font-size: 0.9rem;
 }
