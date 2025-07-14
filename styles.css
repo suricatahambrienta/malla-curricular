@@ -190,7 +190,6 @@ h1 {
   display: block;
   font-weight: 600;
   font-size: 0.9rem;
-  margin-bottom: 0.15rem; /* Reduce el espacio inferior */
 }
 
 /* Campos de texto */
@@ -198,7 +197,6 @@ h1 {
   width: 100%;
   padding: 0.8rem 0.6rem;
   font-size: 1rem;
-  margin-top: 0.15rem;  /* Reduce espacio superior */
   box-sizing: border-box;
   border: 1px solid #999;
   border-radius: 8px;
