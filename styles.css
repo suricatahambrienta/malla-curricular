@@ -190,6 +190,7 @@ h1 {
   display: block;
   font-weight: 600;
   font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Campos de texto */
@@ -200,6 +201,7 @@ h1 {
   box-sizing: border-box;
   border: 1px solid #999;
   border-radius: 8px;
+  margin-bottom: 2rem;
 }
 
 /* Botones dentro del modal */
