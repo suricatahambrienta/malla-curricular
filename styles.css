@@ -155,46 +155,55 @@ h1 {
 }
 
 /* Modal visible */
+.modal-visible {
+  display: flex;
+}
+
+/* Contenedor del modal */
 #modal-agregar-curso {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
-  display: flex;
+  background: rgba(0, 0, 0, 0.5);
   align-items: center;
   justify-content: center;
   z-index: 1500;
 }
 
+/* Contenido del modal */
 .modal-contenido {
   background: white;
   padding: 1.5rem 2rem;
   border-radius: 8px;
   min-width: 320px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
+/* Título del modal */
 .modal-contenido h3 {
   margin-top: 0;
   margin-bottom: 1rem;
   text-align: center;
 }
 
+/* Etiquetas de los campos */
 .modal-contenido label {
   display: block;
   font-weight: 600;
   font-size: 0.9rem;
 }
 
+/* Campos de texto */
 .modal-contenido input {
-  width: 100%;               /* Ocupa todo el ancho del contenedor */
-  padding: 0.8rem 0.6rem;   /* Más alto y cómodo para escribir */
+  width: 100%;
+  padding: 0.8rem 0.6rem;
   font-size: 1rem;
   margin-top: 0.3rem;
   box-sizing: border-box;
   border: 1px solid #999;
-  border-radius: 8px;       /* Bordes redondeados */
+  border-radius: 8px;
 }
 
+/* Botones dentro del modal */
 .modal-contenido button {
   margin-top: 1rem;
   margin-right: 0.5rem;
@@ -206,6 +215,7 @@ h1 {
   transition: background-color 0.3s;
 }
 
+/* Botón Aceptar */
 .modal-contenido button[type="submit"] {
   background-color: #228B22;
   color: white;
@@ -215,6 +225,7 @@ h1 {
   background-color: #1e7a1e;
 }
 
+/* Botón Cancelar */
 .modal-contenido button#btn-cancelar {
   background-color: #bbb;
   color: #222;
@@ -222,36 +233,6 @@ h1 {
 
 .modal-contenido button#btn-cancelar:hover {
   background-color: #999;
-}
-
-/* Menú de selección estado */
-.menu-estado {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  border: 1px solid #333;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 2000;
-  width: 120px;
-  user-select: none;
-}
-
-.menu-estado .opcion {
-  padding: 6px 8px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  border-bottom: 1px solid #ccc;
-}
-
-.menu-estado .opcion:last-child {
-  border-bottom: none;
-}
-
-.menu-estado .opcion:hover {
-  background-color: #eee;
 }
 
 }
